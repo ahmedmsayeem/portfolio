@@ -22,27 +22,13 @@ export default function App() {
       
 
     
-        <header className="text-center">
-          <motion.h1 
-            className="text-4xl font-bold text-gray-800 mb-2"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            M Sayeem Ahmed
-          </motion.h1>
-          <motion.p 
-            className="text-xl text-gray-600"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            Full-Stack Developer & Ts and Js
-          </motion.p>
-        </header>
+      
 
-
-        <div className="relative flex items-center space-x-4">
+<br />
+        <div className="relative flex items-center justify-between space-x-4 ">
+        <div className="relative flex items-center justify-center space-x-4">
+  {/* Image Section */}
+  <div className="flex flex-col items-center space-y-4">
   {/* Image Section */}
   <motion.div
     whileHover={{ scale: 1.1 }}
@@ -51,44 +37,38 @@ export default function App() {
     drag
     initial={{ scale: 0 }}
     animate={{ scale: 1 }}
-    className="bg-slate-400 w-fit rounded-full p-3"
+    className="bg-slate-400 rounded-full p-3"
   >
     <img
       src="https://avatars.githubusercontent.com/u/108409022?v=4"
-      alt=""
+      alt="Profile"
       className="rounded-full w-[150px] pointer-events-none"
     />
   </motion.div>
 
-  {/* Stats Section */}
-  <div className="flex-1 space-y-4 text-right">
-    {/* Uncomment below if needed */}
-    {/* <iframe
-      src="https://streak-stats.demolab.com?user=ahmedmsayeem&theme=gruvbox&border_radius=4.5"
-      frameBorder="0"
-      className="w-full h-20"
-    ></iframe>
-    <iframe
-      src="https://github-readme-stats.vercel.app/api?username=ahmedmsayeem&show_icons=true&theme=gruvbox"
-      frameBorder="0"
-      className="w-full h-32"
-    ></iframe>
-    <iframe
-      src="https://leetcode.card.workers.dev/Sayeem_Ahmed?theme=auto&font=patrick_hand&extension=null"
-      frameBorder="0"
-      className="w-full h-20"
-    ></iframe> */}
-  </div>
-
-  {/* TEST Section */}
-  <div className=" right-0">
-    <TEST />
-  </div>
+  {/* Name Section */}
+  <motion.div
+    className="text-center"
+    initial={{ opacity: 0, y: -20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+  >
+    <h1 className="text-4xl font-bold text-gray-800">M Sayeem Ahmed</h1>
+    <p className="text-xl text-gray-600">Full-Stack Developer & Ts and Js</p>
+  </motion.div>
 </div>
+</div>
+
+
+            {/* TEST Section */}
+            <div className=" right-0">
+              <TEST />
+            </div>
+        </div>
 
         
 
-        <section>
+        <section className='pt-12'>
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">My Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             
